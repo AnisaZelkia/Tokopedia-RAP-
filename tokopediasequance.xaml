@@ -1,0 +1,171 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="tokopediasequance" this:tokopediasequance.In_namaProduk="Laptop" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_namaProduk" Type="InArgument(x:String)" />
+    <x:Property Name="out_harga" Type="OutArgument(x:String)" />
+    <x:Property Name="out_nama" Type="OutArgument(x:String)" />
+    <x:Property Name="out_image" Type="OutArgument(x:String)" />
+  </x:Members>
+  <mva:VisualBasic.Settings>
+    <x:Null />
+  </mva:VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>565.333333333333,1756</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.DynamicUpdate</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="33">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <sap:WorkflowViewStateService.ViewState>
+    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+      <x:Boolean x:Key="ShouldExpandAll">False</x:Boolean>
+    </scg:Dictionary>
+  </sap:WorkflowViewStateService.ViewState>
+  <Sequence DisplayName="TokopediaSequence" sap:VirtualizedContainerService.HintSize="494,1691.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:KillProcess AppliesTo="{x:Null}" ContinueOnError="{x:Null}" Process="{x:Null}" DisplayName="Kill Process" sap:VirtualizedContainerService.HintSize="452,135.333333333333" sap2010:WorkflowViewState.IdRef="KillProcess_1" ProcessName="!explore" />
+    <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="452,1424" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="3a8431e6-ff8c-46e6-ad9a-4ec28044c892" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence sap:VirtualizedContainerService.HintSize="418,1206" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1112.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="x:String" Name="str_name" />
+                <Variable x:TypeArguments="x:String" Name="str_price" />
+                <Variable x:TypeArguments="x:String" Name="str_img" />
+                <Variable x:TypeArguments="x:String" Name="str_harga" />
+                <Variable x:TypeArguments="x:String" Name="str_image" />
+                <Variable x:TypeArguments="x:String" Name="out_nama" />
+              </Sequence.Variables>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayBetweenKeys="20" DisplayName="Type Into 'Kategori'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="334,220" sap2010:WorkflowViewState.IdRef="NTypeInto_1" InteractionMode="DebuggerApi" ScopeIdentifier="3a8431e6-ff8c-46e6-ad9a-4ec28044c892" Text="[In_namaProduk]" Version="V1">
+                <uix:NTypeInto.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.tokopedia.com/" DesignTimeRectangle="422, 299, 1060, 60" ElementType="InputBox" FriendlyName="'INPUT'" FullSelectorArgument="&lt;webctrl tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='text' class='css-1wc186l e110g5pc0' aaname='' /&gt;" Guid="ecb49381-55d6-49e6-ad8d-02692eb94641" ImageBase64="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" InformativeScreenshot="e0b2c99303016aef6ed4d34de573f5c2.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Situs Jual Beli Online Terlengkap, Mudah &amp;amp; Aman | Tokopedia' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" WaitForReadyArgument="Complete">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                        <uix:Target DesignTimeRectangle="310, 304, 87, 45" ElementType="Text" FriendlyName="'Kategori'" FullSelectorArgument="&lt;webctrl aaname='Kategori' parentid='header-main-wrapper' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Kategori' parentid='header-main-wrapper' tag='DIV' type='' class='css-vk082c' check:innerText='Kategori' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFsAAAAxCAYAAAC1WdWlAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARQSURBVHhe7ZhXSytBFIDvn/ZN8EEUVBAbIioi+GDBgoqIHRUV7GADe0GxYcGu6Fy+QyaO60bX3OsxkflgSbI7O+WbmXN288d41PCyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFfGyFYkk++bmxlRVVcnBd5eLiwtTW1trcnNzzdramnl5eYldicbs7KzJyMgwW1tbsTOpD2OcmpoyOTk58hl1zP8k++rqSkRnZmaKtK+KhnSU/fz8bHp6eqTffPI7CknLfnh4MK2trSJ6ZmYmKdGQjrIBwbe3t5FFQ1KyHx8fTW9vr0gaGhr6UoNB0lV2MnxZNqEDwQhCOOLDuL6+li2Wn58vZYuKiszo6KjsCDg+PjaFhYVyzT2Qbzk7OzMdHR2SD7hWWlpqxsbGzN3dXazEK7Q3MDDwpuzc3JyZnJyU3+5ksgsPDg5MU1OTycrKipcfHx+P9w8YW0tLi4ybfNTQ0CA7mbo4gv39jC/JrqysNCMjI9IgIcTtmMvl5aWURzTl6Sjiua+trU0GcX9/Lx22O4SBrq+vi2DY2NgQcSUlJWZ6elrq6OvrEzk1NTXxcmBzB9coQ9nBwUH5nZ2d/UY2ohFEX+gjIXB1ddW0t7dL+bq6OqkPrGzu56BdJvTk5OT7ZdtG6+vr5VwiEMwgGbSFQQ4PD8v5vb292NnwMMJkMbEItAO3bG9vm4KCAtPZ2Wmenp7i9SJvZWXlTe6wE+bWz4rmfhYLE27hPvpL+e7ubgmNruxguPx22XSErc9ncGAWzrHNSR7udb6zgujg/Px87Gy47KWlJTm3sLAQO/MKA0ZGcXGxOT09lXZYcSwAVx5Qtqur6039diHs7u7KbxcmjxVeVlYmO8fKZsyEPZdvl82xubkp8Q3hrJxE0FHCAmGC+2xsDHYwTDYhwJb96OAeG/sJH2G49SOTFc2uIcaHQchil+zs7MRl0//gTlaRzXe7PZF+dHQUK/UK14nX5eXlspKYIAbHZ7CDYbIRl5eXJ9eYsEQHdX4mG3lpLZuQQCN0KhhXGUR1dbVpbm5+l0AnJiYiyf4ojLhhijChEUZ+VDYwaDJ5ULhdaTbJWIivrPQosvkLoKKiQiTy3cXuqmQT5OHhYcIEuby8LBNh3wpTRjbQIfvMbR8FORobG2WQrCK2O5/2eTvYQZs0eSTkaSDKox/94PHLEvboZ9tEHvVb2UilfSaHeqI8+qWEbEAuommYxMZqOz8/D30ZWVxcfNdB7meVMvjgNcS79fBiRBth8ZZzXLOT+r9fatRkpzLsrv39fUloTHQQ8gTJFrk/TdrLZpX29/dLuHBfooDkSVggYSd6+tAk7WUD8ZswYP8eIE8Qi9n+hCe2ups4f4pfIRt4xWeFE9eJpTbZIT4VRMOvkZ0OeNmKeNmKeNmKeNmKeNmKeNmKeNmKeNmKeNmKeNmKeNmKeNmKeNlqGPMXQO2NDx+Ke7sAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NTypeInto.Target>
+              </uix:NTypeInto>
+              <uix:NClick ClickType="Single" DisplayName="Click Search" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3a8431e6-ff8c-46e6-ad9a-4ec28044c892" Version="V1">
+                <uix:NClick.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.tokopedia.com/" DesignTimeRectangle="1482, 307, 48, 45" ElementType="Button" FriendlyName="'BUTTON'" FullSelectorArgument="&lt;webctrl tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' type='submit' class='css-1czin5k e1v32nag1' aaname='' /&gt;" Guid="49232b1f-51e5-4ca0-993e-30d46ea1b4a6" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADQAAAAxCAYAAACVtYpYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAJmSURBVGhD3Zo9TxwxEIb5/38iXYpUFGlCg6JURKKBggIJpUh0XCDAwd1+3JfDY+FoM5q7249ZYXukVwun2dU8Hs/YWu/Rr8nUxazb6Z27f3h0L/OFW6/X7pAdvV2jtfVm48qqck+zZzd5hXt4nO0F+wfECMSm+aJwZVm5ul66zSsY9vwy95lbFIX/X1rUQFJlVXuw5XLlpnd//G/SkgIKWq5WfioCJTOVJBBiGpIppl+zppIFQmSKmqJRBEsaCG22W9/9QpaSB6JR0NL5G0seCLFOsfhiWQDRINhRYFkAFWXpux02GtDt73uvmx8//VXzsRI7ilGACPzs/MJ9Ov7iPnw8/k/8dvrt+2hw5kBkQkJoAgxo7RlDZAp0eXWtBr9PZEt7Vl+ZAWmZCVlAwBK8Ng0tocyA2gYZ6kv6MyCaf1eZAMkA24y4nJ6fT76qfl1lAiSnkeajCYg+9+2TCVAzqC71IOvOYtoNBpJBMZU0P03UU/NeizZuDtR1lJv3dhmMXRoMNGSUZWOIAgg1i5sGofloot6aQBbbIRMgGVibLMmpGlXbltPu0D4Nf9nqLTocMgFCcnFFBE1dECwQXHf5ac/sIzMgAtaCbSugoqmhoK5QctpZQJkCBRGU3NY0ReChZqTfUKhRgIIIjBpCZE4rfHwsMzUqUFvtgtJ8DykKIKRB9clSNEAIgFBTyWeoqb71g6IE6qvR3su9l4qizOtVMCcQWb2s59CLK5Y8EKfkWR140RCyOZKs6tp3tywOjTnkyuZYn8xk8eEFDSAsokl+GkPwLJqsM7TmVh8vQRuzsvu8rJs59xfMcMQZAeMaewAAAABJRU5ErkJggg==" InformativeScreenshot="1e56ed0d7355a0ea452f3eed327912c4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Situs Jual Beli Online Terlengkap, Mudah &amp;amp; Aman | Tokopedia' /&gt;" SearchSteps="FuzzySelector, Image" Visibility="Interactive" />
+                </uix:NClick.Target>
+              </uix:NClick>
+              <uix:NGetText DisplayName="Get Text 'Lenovo Legion'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="3a8431e6-ff8c-46e6-ad9a-4ec28044c892" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.tokopedia.com/search?q=laptop+lenovo&amp;source=universe&amp;st=product&amp;srp_component_id=02.07.02.01" DesignTimeRectangle="1021, 882, 234, 54" ElementType="Text" FriendlyName="'Lenovo Legion'" FullSelectorArgument="&lt;webctrl tag='DIV' class='prd_link-product-name css-svipq6' isleaf='1' parentclass='pcv3__info-content css-gwkf0u' idx='1' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' class='prd_link-product-name css-svipq6' isleaf='1' parentclass='pcv3__info-content css-gwkf0u' type='' /&gt;" Guid="2b3e2f4d-f5ee-4e98-80f5-dbfd80a444f2" ImageBase64="" InformativeScreenshot="e53b74d6cc523657ddde7275b28c3780.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jual * | Tokopedia' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_nama]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <uix:NGetText DisplayName="Get Text 'Rp 37.499.000'" sap:VirtualizedContainerService.HintSize="334,158" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="3a8431e6-ff8c-46e6-ad9a-4ec28044c892" Version="V1">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable BrowserURL="https://www.tokopedia.com/search?q=laptop+lenovo&amp;source=universe&amp;st=product&amp;srp_component_id=02.07.02.01" DesignTimeRectangle="1021, 642, 234, 30" ElementType="Text" FriendlyName="'Rp 37.499.000'" FullSelectorArgument="&lt;webctrl tag='DIV' isleaf='1' parentclass='pcv3__info-content css-gwkf0u' idx='2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' isleaf='1' parentclass='pcv3__info-content css-gwkf0u' type='' class='prd_link-product-price css-1ksb19c' /&gt;" Guid="d5fe943d-8621-42de-9e36-1d47117fa79d" ImageBase64="" InformativeScreenshot="a88128b16b7ae684fa363fecfb277032.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Jual * | Tokopedia' /&gt;" SearchSteps="Selector" Visibility="Interactive" />
+                </uix:NGetText.Target>
+                <uix:NGetText.Text>
+                  <OutArgument x:TypeArguments="x:String">[out_harga]</OutArgument>
+                </uix:NGetText.Text>
+              </uix:NGetText>
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_1" Text="[out_nama]" />
+              <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="334,62.6666666666667" sap2010:WorkflowViewState.IdRef="WriteLine_2" Text="[out_harga]" />
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-11, -11, 1942, 1030" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="6989a34e274faa96cea661bbe223f99d.png" Selector="&lt;html app='chrome.exe' title='Promo Bebas Ongkir ke Seluruh Indonesia Hanya di Tokopedia!' /&gt;" Url="https://www.tokopedia.com" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
