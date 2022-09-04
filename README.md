@@ -1,2 +1,2 @@
 # Tokopedia
-automation
+automation-tester
